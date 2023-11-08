@@ -26,45 +26,40 @@ body {
     box-shadow: 0 0 50px 10px  #1e57904b;
 }
 
-.wrapper-container__left {
+.wrapper__left {
     display: flex;
-    max-width: 500px;
+    width: 500px;
+    background: url('../imgs/img.png') no-repeat;
+    background-size: contain;
 }
 
-.wrapper-container__left img {
-    object-fit: contain;
-    width: 100%;
-}
-
-.wrapper-container__right {
+.wrapper__right {
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.wrapper-container-right__title {
+.wrapper__title {
     margin-bottom: 15px;
 
-    font-weight: 700;
     font-size: 20px;
     color: #2A4A5C
 }
 
-.wrapper-container-right__subtitle {
+.wrapper__subtitle {
     margin-bottom: 40px;
 
-    font-weight: 500;
     color: #7B8A92;
 }
 
-.wrapper-container-right__another-way {
+.wrapper__another-way {
     display: flex;
     gap: 20px;
     margin-bottom: 40px;
 }
 
-.wrapper-container-right__another-way button {
+.wrapper__another-way button {
     padding: 10px 0;
     flex: 1;
     cursor: pointer;
@@ -99,7 +94,7 @@ body {
     left: 15px
 }
 
-.wrapper-container-right__interval {
+.wrapper__interval {
     display: flex;
     gap: 5px;
     align-items: center;
@@ -113,26 +108,55 @@ body {
     font-weight: 600;
 }
 
-.wrapper-container-right__interval span {
+.wrapper__interval::after,
+.wrapper__interval::before {
     position: relative;
-    top: 1px;
-    flex: 1;
+    content: "";
     background-color: #7b8a9276;
     height: 0.5px;
+    flex: 1;
 }
 
-.wrapper-container-right__email-phone {
+.wrapper__email-phone {
     display: flex;
     gap: 20px;
     margin-bottom: 30px;
 }
 
-.wrapper-container-right__email-phone div {
+
+.wrapper__number-container {
     position: relative;
     flex: 1;
 }
 
-.wrapper-container-right-email-phone__input {
+.wrapper__number-container::before {
+    position: absolute;
+    content: "Phone";
+    top: 5px;
+    left: 5px;
+
+    font-size: 10px;
+    color: #7B8A92;
+    font-weight: 600;
+}
+
+.wrapper__email-contianer {
+    position: relative;
+    flex: 1;
+}
+
+.wrapper__email-contianer::before {
+    position: absolute;
+    content: "Emial";
+    top: 5px;
+    left: 5px;
+
+    font-size: 10px;
+    color: #7B8A92;
+    font-weight: 600;
+}
+
+.wrapper__input {
     padding: 20px 5px 5px 5px;
     border: 1px solid #7b8a9235;
     background-color: transparent;
@@ -142,21 +166,11 @@ body {
     font-size: 10px;
 }
 
-.wrapper-container-right-email-phone__input:focus {
+.wrapper__input:focus {
     border-left-color: #96A5B1;
 }
 
-.wrapper-container-right-email-phone__placeholder {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-
-    font-size: 10px;
-    color: #7B8A92;
-    font-weight: 600;
-}
-
-.wrapper-container-right__form-title {
+.wrapper__form-title {
     margin-bottom: 13px;
 
     font-weight: 700;
@@ -164,14 +178,14 @@ body {
     color: #2A4A5C
 }
 
-.wrapper-container-right__form-subtitle {
+.wrapper__form-subtitle {
     margin-bottom: 40px;
     font-weight: 500;
     color: #7B8A92;
     font-size: 13px;
 }
 
-.wrapper-container-right__investors {
+.wrapper__investors {
     display: flex;
     gap: 20px;
 }
@@ -181,7 +195,7 @@ input[type='checkbox'] {
     display: none;
 }
 
-.wrapper-container-right-investors__investor {
+.wrapper__investor {
     position: relative;
     display: flex;
     align-items: center;
@@ -189,7 +203,7 @@ input[type='checkbox'] {
 }
 
 
-.wrapper-container-right-investors__investor label {
+.wrapper__investor label {
     display: flex;
     gap: 10px;
 
@@ -197,18 +211,18 @@ input[type='checkbox'] {
     font-weight: 600;
 }
 
-.wrapper-container-right-investors__investor label div {
+.wrapper__radio-style {
     border: 2px solid #7b8a9235;
     border-radius: 50%;
     width: 15px;
     height: 15px;
 }
 
-.wrapper-container-right-investors__investor label input:checked ~ div{
+.wrapper__investor label input:checked ~ .wrapper__radio-style{
     border: 4px solid #0076B6;
 }   
 
-.wrapper-container-right-investors-investor__btn {
+.wrapper__btn-info {
     border: 1px solid #7B8A92;
     cursor: pointer;
     width:8px;
@@ -222,7 +236,7 @@ input[type='checkbox'] {
     font-size:7px;
 }
 
-.wrapper-container-right-investors-investor__info {
+.wrapper__info-text {
     position: absolute;
     left: 0;
     top: 30px;
@@ -241,19 +255,19 @@ input[type='checkbox'] {
     font-size: 12px;
 }
 
-.wrapper-container-right-investors-investor__btn:hover ~ p {
+.wrapper__btn-info:hover ~ p {
     visibility: visible;
     opacity: 1;
 }
 
-.wrapper-container-right__investors li:nth-last-child(1) .wrapper-container-right-investors-investor__info,
-.wrapper-container-right__investors li:nth-last-child(2) .wrapper-container-right-investors-investor__info{
+.wrapper__investors li:nth-last-child(1) .wrapper__info-text,
+.wrapper__investors li:nth-last-child(2) .wrapper__info-text{
     right: 0;
     left: auto;
 }
 
 
-.wrapper-container-right__agreement {
+.wrapper__agreement {
     margin-top: 100px;
     display: flex;
     align-items: center;
@@ -263,23 +277,23 @@ input[type='checkbox'] {
     color: #7B8A92;
 }
 
-.wrapper-container-right-agreement__text a {
+.wrapper__text-agreement a {
     color: #0076B6;
     text-decoration: underline;
 }
 
-.wrapper-container-right__agreement div {
+.wrapper__style-checkbox {
     display: flex;
     width: 8px;
     height: 8px;
     border: 1px solid #7b8a9235;
 }
 
-.wrapper-container-right__agreement input:checked ~ div {
+.wrapper__agreement input:checked ~ .wrapper__style-checkbox {
     border: 3px solid #0076B6;
 }
 
-.wrapper-container-right__create-btn {
+.wrapper__create-btn {
     background-color: #0b92db;
     border: none;
     border-radius: 4px;
