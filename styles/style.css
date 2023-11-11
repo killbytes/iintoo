@@ -31,6 +31,7 @@ body {
     width: 500px;
     background: url('../imgs/img.png') no-repeat;
     background-size: contain;
+    height: 660px;
 }
 
 .wrapper__right {
@@ -64,9 +65,19 @@ body {
     flex: 1;
     cursor: pointer;
     border: none;
-    
     color: white;
     font-size: 10px;
+}
+
+.logo {
+    display: flex;
+    width: 90px;
+    height: 20px;
+    margin: 26px 0 0 32px;
+}
+
+.logo img {
+    width: 90px;
 }
 
 .fb {
@@ -185,7 +196,7 @@ body {
     font-size: 13px;
 }
 
-.wrapper__investors {
+.investors {
     display: flex;
     gap: 20px;
 }
@@ -195,7 +206,7 @@ input[type='checkbox'] {
     display: none;
 }
 
-.wrapper__investor {
+.investors__item {
     position: relative;
     display: flex;
     align-items: center;
@@ -203,7 +214,7 @@ input[type='checkbox'] {
 }
 
 
-.wrapper__investor label {
+.investors__item label {
     display: flex;
     gap: 10px;
 
@@ -218,7 +229,7 @@ input[type='checkbox'] {
     height: 15px;
 }
 
-.wrapper__investor label input:checked ~ .wrapper__radio-style{
+.investors__item label input:checked ~ .wrapper__radio-style{
     border: 4px solid #0076B6;
 }   
 
@@ -260,8 +271,8 @@ input[type='checkbox'] {
     opacity: 1;
 }
 
-.wrapper__investors li:nth-last-child(1) .wrapper__info-text,
-.wrapper__investors li:nth-last-child(2) .wrapper__info-text{
+.investors li:nth-last-child(1) .wrapper__info-text,
+.investors li:nth-last-child(2) .wrapper__info-text{
     right: 0;
     left: auto;
 }
@@ -315,5 +326,45 @@ input[type='checkbox'] {
     }
     .wrapper__container {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper__left {
+        height: 67vh;
+    }
+    .wrapper__another-way {
+        flex-direction: column;
+    }
+    .wrapper__email-phone {
+        flex-direction: column;
+    }
+    .wrapper__left {
+        width: auto;
+        max-width: 500px;
+    }
+
+    .wrapper__container {
+        width: 70%;
+    }
+    .investors {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .wrapper__left {
+        height: 55vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper__left {
+        height: 45vh;
+    }
+}
+@media (max-width: 320px) {
+    .wrapper__left {
+        height: 40vh;
     }
 }
