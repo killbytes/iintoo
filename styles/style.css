@@ -330,6 +330,12 @@ input[type='checkbox'] {
 }
 
 @media (max-width: 600px) {
+    .logo img {
+        width: 75%;
+    }
+    .logo {
+        margin: 5% 0 0 7%;
+    }
     .wrapper__left {
         height: 67vh;
     }
@@ -355,6 +361,9 @@ input[type='checkbox'] {
 @media (max-width: 500px) {
     .wrapper__left {
         height: 55vh;
+    }
+    .logo {
+        margin: 4% 0 0 6%;
     }
 }
 
