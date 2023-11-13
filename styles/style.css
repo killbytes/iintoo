@@ -29,9 +29,12 @@ body {
 .wrapper__left {
     display: flex;
     width: 500px;
-    background: url('../imgs/img.png') no-repeat;
+    background: url('../imgs/bg.jpg') no-repeat;
     background-size: contain;
     height: 660px;
+    @media (max-width: 1000px) {
+        background-size: cover;
+    }
 }
 
 .wrapper__right {
@@ -211,6 +214,13 @@ input[type='checkbox'] {
     display: flex;
     align-items: center;
     gap: 4px;
+
+    &.checked_active {
+        .wrapper__info-text {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
 }
 
 
@@ -261,7 +271,6 @@ input[type='checkbox'] {
     border-radius: 5px;
     padding: 10px;
     transition-duration: .2s;
-
     color: #7B8A92;
     font-size: 12px;
 }
@@ -347,11 +356,10 @@ input[type='checkbox'] {
     }
     .wrapper__left {
         width: auto;
-        max-width: 500px;
     }
 
     .wrapper__container {
-        width: 70%;
+        width: 100%;
     }
     .investors {
         flex-wrap: wrap;
