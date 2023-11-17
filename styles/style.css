@@ -116,7 +116,6 @@ body {
     width: 200px;
     margin: 0 auto;
     margin-bottom: 40px;
-
     font-size: 10px;
     color: #2A4A5C;
     font-weight: 600;
@@ -241,18 +240,18 @@ input[type='checkbox'] {
 
 .investors__item label input:checked ~ .wrapper__radio-style{
     border: 4px solid #0076B6;
-}   
+}
 
 .wrapper__btn-info {
     border: 1px solid #7B8A92;
     cursor: pointer;
-    width:8px;
-    height: 8px;
+    width:10px;
+    height: 10px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-bottom: 2px;
     color: #7B8A92;
     font-size:7px;
 }
@@ -292,7 +291,7 @@ input[type='checkbox'] {
     display: flex;
     align-items: center;
     gap: 4px;
-    
+
     font-size: 11px;
     color: #7B8A92;
 }
@@ -363,6 +362,24 @@ input[type='checkbox'] {
     }
     .investors {
         flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .wrapper__info-text {
+        left: 100px;
+        top: 0;
+    }
+    .investors li:nth-last-child(2) .wrapper__info-text {
+        right: unset;
+        left: 100px;
+        top: 0;
+    }
+    .investors li:nth-last-child(1) .wrapper__info-text{
+        right: unset;
+        left: 100px;
+        top: -40px;
+    }
+    .wrapper__agreement {
+        margin-top: 20px;
     }
 }
 
@@ -378,6 +395,17 @@ input[type='checkbox'] {
 @media (max-width: 400px) {
     .wrapper__left {
         height: 45vh;
+    }
+}
+@media (max-width: 360px) {
+    .wrapper__info-text {
+        width: 50%;
+    }
+    .investors li:nth-last-child(2) .wrapper__info-text {
+        top: -50px;
+    }
+    .investors li:nth-last-child(1) .wrapper__info-text{
+        top: -80px;
     }
 }
 @media (max-width: 320px) {
